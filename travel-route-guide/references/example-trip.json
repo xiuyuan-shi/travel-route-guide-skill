@@ -1,0 +1,176 @@
+{
+  "trip": {
+    "origin": "示例出发城市",
+    "destination": "示例目的城市",
+    "duration": 3,
+    "title": "三天慢游 · 模板测试",
+    "summary": "离线测试数据，不是实际旅行建议。正式使用时替换为已研究的城市、点位与路线。",
+    "tags": [
+      "手机阅读",
+      "测试示例"
+    ]
+  },
+  "places": {
+    "a": {
+      "name": "示例酒店",
+      "lat": 31.31,
+      "lon": 120.62,
+      "kind": "hotel",
+      "description": "仅测试坐标，不代表真实酒店。"
+    },
+    "b": {
+      "name": "示例街区",
+      "lat": 31.32,
+      "lon": 120.63,
+      "kind": "spot",
+      "description": "这里应写真实景点的停留建议。"
+    },
+    "c": {
+      "name": "示例餐厅",
+      "lat": 31.315,
+      "lon": 120.635,
+      "kind": "food",
+      "description": "这里应写选店理由。",
+      "address": "仅示例，无真实门店地址。"
+    }
+  },
+  "legs": {
+    "ab": {
+      "from": "a",
+      "to": "b",
+      "mode": "walk",
+      "status": "schematic"
+    },
+    "bc": {
+      "from": "b",
+      "to": "c",
+      "mode": "transit",
+      "status": "schematic"
+    }
+  },
+  "days": [
+    {
+      "title": "抵达与熟悉环境",
+      "summary": "抵达时间未知，先留机动。",
+      "stops": [
+        {
+          "time": "抵达后",
+          "title": "酒店办理入住",
+          "description": "示例行程。",
+          "place_id": "a"
+        }
+      ],
+      "leg_ids": []
+    },
+    {
+      "title": "街区慢逛与当地餐饮",
+      "summary": "集中相邻片区安排。",
+      "stops": [
+        {
+          "time": "上午",
+          "title": "街区散步",
+          "description": "示例行程。",
+          "place_id": "b"
+        },
+        {
+          "time": "午间",
+          "title": "顺路午饭",
+          "description": "这里应放已核对的分店。",
+          "place_id": "c",
+          "food": {
+            "menu": "按真实菜单规划",
+            "budget": "待核对"
+          }
+        }
+      ],
+      "leg_ids": [
+        "ab",
+        "bc"
+      ],
+      "tip": "路线是点位示意，不是步行导航。"
+    },
+    {
+      "title": "早餐与返程",
+      "summary": "实际票务确定后倒推离开酒店时间。",
+      "stops": [
+        {
+          "time": "待票面确定",
+          "title": "返程",
+          "description": "不编造车次与时刻。"
+        }
+      ],
+      "leg_ids": []
+    }
+  ],
+  "sections": [
+    {
+      "title": "交通与预算",
+      "body": "示例未查询实时资料，不包含真实车次、票价、酒店或餐厅推荐。"
+    }
+  ],
+  "lodging": [
+    {
+      "place_id": "a",
+      "label": "路线中心候选",
+      "price": "示例：每间每晚待核对",
+      "reason": "用于展示住宿卡片；正式攻略应说明与主要路线的关系。",
+      "caveat": "离线测试数据，不代表真实酒店或实时房价。"
+    }
+  ],
+  "budget": {
+    "basis": "示例口径：交通与餐饮按人，住宿按每间每晚。",
+    "total_estimate": "待人数、日期与房间数确定",
+    "reserve_note": "另留机动金；正式攻略需给出区间。",
+    "items": [
+      {
+        "label": "餐饮",
+        "amount": "待核对／人",
+        "note": "不得把示例数字当成目的地价格。"
+      }
+    ]
+  },
+  "food_quick": [
+    {
+      "place_id": "c",
+      "when": "Day 2 午间",
+      "order": "按真实菜单规划",
+      "budget": "待核对／人",
+      "fallback": "排队过久时在同片区选择明码标价餐厅。"
+    }
+  ],
+  "checklist": [
+    {
+      "category": "票务与证件",
+      "items": [
+        "核对往返日期、车站与出发时间",
+        "保存酒店中文地址和紧急联系人"
+      ]
+    }
+  ],
+  "pitfalls": [
+    {
+      "title": "不要把示意路线当导航",
+      "advice": "虚线只表达点位关系，步行前打开地图导航。"
+    }
+  ],
+  "emergencies": [
+    {
+      "scenario": "大雨或大风",
+      "action": "删除户外高处和长距离步行，优先选择同片区且已核对开放情况的室内地点。"
+    },
+    {
+      "scenario": "交通延误",
+      "action": "保留抵达日机动时间，返程按票面倒推并提前到站。"
+    }
+  ],
+  "weather": {
+    "provider": "open-meteo",
+    "lat": 31.32,
+    "lon": 120.63,
+    "timezone": "Asia/Shanghai",
+    "start_date": "2099-01-01",
+    "end_date": "2099-01-03",
+    "official_url": "https://www.nmc.cn/"
+  },
+  "sources": []
+}

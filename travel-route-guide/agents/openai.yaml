@@ -1,0 +1,4 @@
+interface:
+  display_name: "城市旅行攻略"
+  short_description: "生成城市行程、地图、住宿预算、清单、应急与实时天气"
+  default_prompt: "使用 $travel-route-guide，从杭州出发去苏州，安排3天行程，生成含路线地图、住宿预算、美食速查、行前清单、应急方案和可用天气预报的手机网页版攻略。"
